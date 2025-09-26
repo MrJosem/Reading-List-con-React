@@ -1,0 +1,97 @@
+.main{
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    gap: 20px;
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+
+.form{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    width: 45%;
+}
+
+fieldset{
+    padding: 40px;
+}
+
+.title{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+.authorGenre{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.authorGenre__author{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+.authorGenre__genre{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+input{
+    padding: 10px;
+}
+
+#submit{
+    background-color: darkgray;
+    cursor: pointer;
+    color: black;
+}
+
+hr{
+    align-self: end;
+}
+
+.article{
+    width: 45%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+.book{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 3px;
+    border-bottom: 1px solid black;
+    padding: 15px;
+}
+
+.titleAuthor{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
