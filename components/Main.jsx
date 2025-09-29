@@ -1,10 +1,32 @@
 import styles from "./Main.module.css";
 import { useState } from "react";
 
+/**
+ * Función principal que engloba todo el componente
+ * @function Main
+ * @returns {JSX.Element} Elemento JSX
+ */
+
 export default function Main() {
+  /**
+   * Lista de libros
+   * @type {Array}
+   */
   const [bookList, setBookList] = useState([]);
+  /**
+   * Libro
+   * @type {Object}
+   */
   let [book, setBook] = useState({});
+  /**
+   * Cantidad de libros
+   * @type {number}
+   */
   const [amountBooks, setAmountBooks] = useState(0);
+  /**
+   * Libros leídos
+   * @type {number}
+   */
   const [readBooks, setReadBooks] = useState(0);
 
   let title = "",
@@ -23,7 +45,7 @@ export default function Main() {
   }
 
   function handleDelete(event) {
-    if (event.target.id !== "") { 
+    if (event.target.id !== "") {
       setBookList(bookList.filter((item) => item.title !== event.target.id));
       setReadBooks(readBooks + 1);
     }
