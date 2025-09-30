@@ -1,4 +1,4 @@
-name: "React Docs & gh-pages deploy"
+name: "React Docs"
 on:
   workflow_dispatch:
     inputs:
@@ -7,7 +7,6 @@ on:
         description: "Select the deployment environment"
         options:
           - docs
-          - deploy-gh-pages
 
 jobs:
   docs:
@@ -44,17 +43,3 @@ jobs:
           git commit -m "Automated update from GitHub Actions"
           git push origin main
 
-  deploy-gh-pages:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          force_orphan: true
