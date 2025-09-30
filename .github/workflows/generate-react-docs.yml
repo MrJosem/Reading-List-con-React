@@ -1,0 +1,50 @@
+name: "React Docs & gh-pages deploy"
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: "Select the deployment environment"
+        options:
+          - deploy-gh-pages
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalaciones redundantes
+        run: 
+          npm install --save-dev clean-jsdoc-theme
+          npm install -D jsdoc-babel
+
+      - name: Generar docs
+        working-directory: ./
+        run: jsdoc -c jsdoc.json
+
+
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          force_orphan: true
