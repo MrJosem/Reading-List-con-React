@@ -1,0 +1,1 @@
+{"list":[{"title":"Main","link":"<a href=\"global.html#Main\">Main</a>","description":"<p>Función principal que engloba todo el componente</p>"},{"title":"MyApp","link":"<a href=\"global.html#MyApp\">MyApp</a>","description":"<p>Componente raíz de la aplicación.\nRenderiza el componente <Main /> que contiene la lógica de la lista de lectura.</p>"}]}
