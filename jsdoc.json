@@ -1,16 +1,17 @@
 {
-    "source": {
-        "include": ["src", "components"],
-        "includePattern": ".jsx$",
-        "excludePattern": "(node_modules/|docs)"
-    },
-    "plugins": ["plugins/markdown"],
-    "templates": {
-        "cleverLinks": true,
-        "monospaceLinks": true
-    },
-    "opts": {
-        "recurse": true,
-        "destination": "./docs"
-    }
+  "source": {
+    "include": ["src", "components"],
+    "includePattern": ".jsx$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs",
+    "template": "node_modules/clean-jsdoc-theme"
+  }
 }
