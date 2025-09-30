@@ -6,6 +6,7 @@ on:
         type: choice
         description: "Select the deployment environment"
         options:
+          - docs
           - deploy-gh-pages
 
 jobs:
