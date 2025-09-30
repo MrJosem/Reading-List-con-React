@@ -32,7 +32,7 @@ jobs:
 
       - name: Generar docs
         working-directory: ./
-        run: jsdoc -c jsdoc.json
+        run: npx jsdoc -c jsdoc.json
 
 
   deploy-gh-pages:
